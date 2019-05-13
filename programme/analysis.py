@@ -53,7 +53,7 @@ bow_vec = dict_doc.doc2bow(preprocess(unseen_doc))
 
 
 if __name__ == '__main__':
-    multiprocessing.freeze_support()
+    multiprocessing.freeze_support() #for windows system
     lda_model = LdaMulticore(corpus=bow_corpus, id2word=dict_doc, num_topics=4)
     # print(lda)
     for idx, topic in lda_model.print_topics(-1):
